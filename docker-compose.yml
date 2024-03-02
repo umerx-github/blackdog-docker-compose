@@ -1,5 +1,10 @@
 version: "3.8"
 services:
+    umerx_blackdog_configurator_frontend:
+        image: ghcr.io/umerx-github/blackdog-configurator-frontend:latest
+        restart: always
+        depends_on:
+            - umerx_blackdog_configurator_backend
     umerx_blackdog_configurator_backend:
         image: ghcr.io/umerx-github/blackdog-configurator-backend:latest
         restart: always

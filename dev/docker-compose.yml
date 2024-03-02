@@ -1,8 +1,12 @@
 version: "3.8"
 services:
+    umerx_blackdog_configurator_frontend:
+        image: ghcr.io/umerx-github/blackdog-configurator-frontend:dev
+        ports:
+            - ${BLACKDOG_CONFIGURATOR_FRONTEND_HOST_PORT}:80
     umerx_blackdog_configurator_backend:
         ports:
-            - ${BLACKDOG_CONFIGURATOR_BACKEND_HOST_PORT}:80
+            - 62452:80
     umerx_blackdog_trader_typescript:
         environment:
             - ALPACA_API_KEY=${ALPACA_API_KEY}
