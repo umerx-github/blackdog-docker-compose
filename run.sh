@@ -14,9 +14,9 @@ if [ -z "$1" ]; then
     usage
 fi
 echo "ENVIRONMENT is set to $ENVIRONMENT"
-docker_compose_args=""
+docker_compose_args="--project-directory ."
 if [ "$ENVIRONMENT" = "dev" ]; then
-    docker_compose_args="--env-file dev/.env -f docker-compose.yml -f dev/docker-compose.yml"
+    docker_compose_args="$docker_compose_args --env-file dev/.env -f docker-compose.yml -f dev/docker-compose.yml"
 fi
 
 if [ "$1" = "up" ]; then
