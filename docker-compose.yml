@@ -32,7 +32,7 @@ services:
             - BLACKDOG_CONFIGURATOR_BACKEND_SCHEME=http
             - BLACKDOG_CONFIGURATOR_BACKEND_HOST=umerx_blackdog_configurator_backend
             - BLACKDOG_CONFIGURATOR_BACKEND_PORT=80
-            - BLACKDOG_CONFIGURATOR_BACKEND_PATH=""
+            - BLACKDOG_CONFIGURATOR_BACKEND_PATH=
     db:
         image: mysql:latest
         restart: always
